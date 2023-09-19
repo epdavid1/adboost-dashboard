@@ -197,7 +197,7 @@ def predict_page():
             with col13:
                 plt.clf()
                 shap.summary_plot(shap_values, features=preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index],
-                                        alpha=0.5,
+                                        alpha=0.6,
                                         plot_type='bar',
                                         show=False
                                         )
