@@ -1,0 +1,9 @@
+feature_engine==1.6.1
+matplotlib==3.8.0
+numpy==1.24.4
+pandas==2.1.0
+plotly==5.16.1
+shap==0.42.1
+streamlit==1.26.0
+streamlit_option_menu==0.3.6
+xgboost==2.0.0

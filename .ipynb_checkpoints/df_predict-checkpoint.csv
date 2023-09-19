@@ -1,0 +1,251 @@
+Timestamp,Age,Male,Introvert,Continent,Area Income,Daily Internet Usage,Daily Time Spent on Site,Ad Location,Ad Category
+2016-03-02 04:02:45,29,1,0,Africa,54787.37,120.46,63.26,Push Notif,Finance
+2016-01-05 11:53:17,52,0,1,Europe,41521.28,122.59,71.23,Pop Up,Finance
+2016-05-25 19:45:16,38,1,1,Asia,61757.12,135.25,43.63,Upper Banner,Finance
+2016-02-03 16:54:33,49,0,0,Asia,67323.0,182.11,42.04,Pop Up,Finance
+2016-01-16 16:40:30,29,0,0,Asia,66225.72,208.05,78.68,Pop Up,Food
+2016-03-19 08:00:58,34,0,0,Asia,51816.27,153.01,87.85,Push Notif,Fashion
+2016-04-09 23:26:42,27,1,1,Africa,52261.73,191.78,85.77,Lower Banner,Games
+2016-06-09 17:11:02,44,1,1,Asia,49525.37,106.04,59.13,Push Notif,Finance
+2016-04-05 18:02:49,43,1,0,Asia,54251.78,244.4,83.17,Upper Banner,Finance
+2016-05-13 06:09:28,36,0,0,Antarctica,41229.16,140.46,38.37,Lower Banner,Fashion
+2016-05-30 08:35:54,30,1,1,North America,50356.06,241.38,79.89,Pop Up,Games
+2016-01-05 04:18:46,35,1,1,Europe,57009.76,120.06,49.81,Lower Banner,Food
+2016-07-01 01:12:04,49,0,1,Europe,46931.03,110.84,59.36,Upper Banner,Finance
+2016-02-27 20:20:25,28,0,0,South America,63528.8,203.3,80.87,Pop Up,Fashion
+2016-02-12 03:39:09,38,0,1,Africa,40159.2,190.05,32.6,Lower Banner,Food
+2016-04-29 14:08:26,45,0,1,South America,46197.59,151.72,35.66,Push Notif,Finance
+2016-01-05 00:02:53,52,0,0,South America,32847.53,144.27,46.37,Push Notif,Finance
+2016-05-23 00:32:54,42,0,1,Africa,67575.12,158.81,41.53,Lower Banner,Finance
+2016-04-29 13:38:19,31,0,1,South America,74159.69,190.84,72.94,Lower Banner,Food
+2016-04-12 14:01:08,44,0,0,Europe,44174.25,105.0,62.06,Pop Up,Finance
+2016-06-26 17:25:55,35,1,1,Africa,70495.64,229.99,73.89,Push Notif,Food
+2016-06-23 01:22:43,48,0,0,Africa,70053.27,137.43,63.36,Upper Banner,Finance
+2016-07-03 04:11:40,45,1,0,North America,41417.27,151.47,36.08,Push Notif,Finance
+2016-04-06 05:55:43,21,1,1,Asia,60637.62,198.45,59.61,Lower Banner,Games
+2016-07-03 12:57:03,28,1,0,Oceania,65172.22,217.85,76.81,Lower Banner,Food
+2016-03-16 07:59:37,45,1,0,Europe,40183.75,133.9,40.42,Upper Banner,Finance
+2016-06-01 09:27:34,23,1,1,Europe,51864.77,235.28,63.6,Push Notif,Games
+2016-04-06 17:26:37,28,1,0,Oceania,59967.19,232.68,76.44,Lower Banner,Food
+2016-06-26 02:34:15,43,0,1,Asia,53647.81,121.28,45.62,Push Notif,Finance
+2016-05-24 09:50:41,31,1,1,Europe,51812.71,154.77,38.65,Upper Banner,Fashion
+2016-05-11 22:02:17,25,0,1,Asia,39699.13,199.39,81.58,Upper Banner,Finance
+2016-04-18 11:23:05,38,1,1,Asia,70575.6,146.19,75.8,Push Notif,Finance
+2016-06-14 19:48:34,31,1,0,Oceania,52178.98,210.27,87.85,Pop Up,Games
+2016-06-12 21:21:53,37,0,0,Asia,70232.95,132.63,58.35,Upper Banner,Fashion
+2016-01-28 07:10:29,50,0,1,Oceania,45400.5,113.7,58.6,Pop Up,Finance
+2016-01-16 08:01:40,31,1,1,Oceania,73049.3,201.26,73.41,Lower Banner,Travel
+2016-05-22 15:17:25,28,1,1,Europe,67301.39,216.24,73.27,Pop Up,Food
+2016-01-22 19:43:53,25,1,1,Africa,66429.84,164.25,56.16,Pop Up,Games
+2016-07-22 07:44:43,38,0,1,Africa,24078.93,203.9,40.47,Upper Banner,Fashion
+2016-05-26 22:49:47,41,0,0,Asia,24852.9,156.36,41.82,Lower Banner,Finance
+2016-02-26 09:54:33,25,0,0,Europe,65421.39,220.92,67.05,Lower Banner,Fashion
+2016-04-19 15:14:58,36,1,0,Asia,22473.08,154.02,45.72,Upper Banner,Food
+2016-02-19 07:29:30,22,0,0,Asia,41851.38,169.4,75.55,Lower Banner,Fashion
+2016-02-28 23:54:44,40,1,1,Europe,44217.68,126.11,41.88,Push Notif,Finance
+2016-03-18 16:04:59,25,1,0,Africa,60843.32,231.49,65.8,Lower Banner,Food
+2016-03-21 21:15:54,32,1,0,South America,50216.01,177.78,89.34,Lower Banner,Fashion
+2016-05-03 01:09:01,51,1,1,South America,71455.62,153.12,59.64,Upper Banner,Finance
+2016-01-28 17:03:54,50,1,1,Africa,40926.93,118.27,52.13,Push Notif,Finance
+2016-06-09 19:32:27,23,0,1,South America,52691.79,167.67,78.18,Upper Banner,Games
+2016-03-15 14:33:12,49,1,1,South America,55942.04,117.33,55.77,Lower Banner,Finance
+2016-04-27 18:25:30,40,0,0,Asia,27964.6,125.65,50.32,Upper Banner,Finance
+2016-05-31 23:32:00,22,0,1,Oceania,59422.47,217.37,66.03,Pop Up,Food
+2016-06-29 13:35:05,35,0,0,Oceania,54875.95,109.77,60.25,Push Notif,Food
+2016-01-04 07:28:43,23,1,0,North America,64433.99,208.24,66.89,Push Notif,Finance
+2016-03-23 09:43:43,36,1,1,Asia,61628.72,209.93,87.29,Push Notif,Finance
+2016-07-02 20:23:15,35,1,1,South America,51473.28,267.01,67.64,Push Notif,Finance
+2016-04-30 15:27:22,38,0,0,Africa,61428.18,259.76,68.41,Upper Banner,Fashion
+2016-03-16 20:19:01,49,0,0,Asia,45632.51,122.02,47.64,Pop Up,Finance
+2016-03-04 10:13:48,27,0,0,Europe,67516.07,200.59,75.83,Lower Banner,Fashion
+2016-03-31 08:53:43,38,0,1,Europe,47682.28,105.71,57.51,Lower Banner,Finance
+2016-04-10 14:48:35,35,0,1,Oceania,67714.82,238.58,73.95,Pop Up,Food
+2016-02-14 07:36:58,47,0,0,Asia,62722.57,119.3,62.31,Lower Banner,Travel
+2016-03-07 22:32:15,33,0,0,Africa,72042.85,194.37,78.15,Push Notif,Fashion
+2016-06-27 18:37:04,38,1,1,Africa,38745.29,134.88,40.15,Pop Up,Food
+2016-06-20 04:24:41,35,1,0,North America,63006.14,127.82,50.18,Upper Banner,Finance
+2016-04-25 19:31:39,47,1,1,Asia,14548.06,179.04,66.26,Lower Banner,Finance
+2016-06-18 22:31:22,50,1,0,Europe,43573.66,122.45,48.26,Push Notif,Finance
+2016-02-26 23:44:44,32,1,0,North America,60151.77,195.93,86.58,Pop Up,Fashion
+2016-02-01 09:00:55,31,0,0,Antarctica,60248.97,139.01,46.13,Upper Banner,Fashion
+2016-03-19 00:27:58,38,1,0,Oceania,36037.33,108.7,63.8,Lower Banner,Finance
+2016-04-28 05:50:25,42,0,0,Asia,66541.05,150.99,42.39,Lower Banner,Finance
+2016-05-10 14:12:31,28,0,1,Europe,49158.5,120.25,59.7,Push Notif,Food
+2016-07-09 11:18:02,25,0,0,Asia,58847.07,141.13,66.77,Lower Banner,Fashion
+2016-06-17 23:19:38,28,0,0,Asia,71727.51,190.95,70.9,Upper Banner,Fashion
+2016-05-30 07:36:31,39,1,1,North America,76560.59,159.46,55.2,Push Notif,Fashion
+2016-03-25 15:17:39,24,0,1,Europe,66873.9,167.22,60.53,Lower Banner,Food
+2016-02-24 06:18:11,32,1,1,North America,55424.24,224.07,85.26,Upper Banner,Fashion
+2016-03-11 06:49:10,39,0,0,Africa,27508.41,162.08,38.93,Upper Banner,Fashion
+2016-02-23 13:55:48,28,0,0,Africa,51171.23,161.24,39.86,Pop Up,Food
+2016-01-09 15:49:28,35,0,0,Africa,61383.79,231.07,82.7,Pop Up,Food
+2016-04-15 15:07:17,46,0,0,Europe,23410.75,130.86,65.57,Pop Up,Finance
+2016-01-08 00:17:27,40,0,0,Africa,51317.33,105.22,63.89,Pop Up,Finance
+2016-07-18 11:33:31,29,0,0,North America,27086.4,156.54,47.66,Lower Banner,Fashion
+2016-06-05 22:11:34,32,0,1,North America,51510.18,200.22,35.33,Upper Banner,Fashion
+2016-04-19 05:15:28,31,0,0,North America,68614.98,186.37,80.72,Pop Up,Fashion
+2016-02-28 22:02:14,33,0,0,Asia,61467.33,236.72,79.53,Pop Up,Fashion
+2016-03-24 02:35:54,19,0,0,North America,41920.79,187.95,55.55,Lower Banner,Fashion
+2016-01-11 12:46:31,21,1,1,Africa,50147.72,216.03,71.27,Push Notif,Games
+2016-01-17 05:07:11,31,0,1,Europe,65704.79,179.82,82.72,Lower Banner,Finance
+2016-03-03 22:31:16,32,0,1,Asia,65883.39,231.59,76.84,Upper Banner,Finance
+2016-06-19 22:08:15,29,0,0,Africa,67080.94,168.15,77.66,Upper Banner,Fashion
+2016-05-31 21:41:46,24,0,1,Oceania,33951.63,145.08,55.92,Push Notif,Fashion
+2016-03-30 20:23:48,32,1,0,Asia,69562.46,202.9,79.16,Pop Up,Finance
+2016-06-12 17:52:43,40,0,1,Europe,59621.02,200.23,34.87,Pop Up,Travel
+2016-01-14 08:27:04,33,0,1,Oceania,77143.61,197.66,59.96,Push Notif,Food
+2016-03-23 21:06:51,27,1,1,Asia,38817.4,248.12,56.39,Pop Up,Games
+2016-06-29 10:50:45,51,1,0,Europe,38641.2,121.57,52.84,Lower Banner,Finance
+2016-03-14 23:13:11,34,0,1,Oceania,42696.67,109.07,57.7,Push Notif,Finance
+2016-03-31 20:55:22,32,1,1,Europe,61601.05,178.92,86.06,Upper Banner,Finance
+2016-03-04 13:47:47,31,1,0,Asia,59340.99,222.72,83.48,Lower Banner,Food
+2016-02-28 23:21:22,35,1,1,Oceania,53898.89,138.52,39.96,Lower Banner,Finance
+2016-02-15 05:35:54,23,1,0,North America,56605.12,211.38,73.71,Push Notif,Finance
+2016-03-05 12:03:41,45,0,1,Europe,39211.49,107.92,63.18,Push Notif,Finance
+2016-01-31 04:10:20,32,0,1,North America,61608.23,231.42,80.91,Lower Banner,Food
+2016-07-18 04:53:22,51,0,0,South America,45522.44,195.07,35.76,Lower Banner,Finance
+2016-01-11 02:07:14,46,0,1,South America,53185.34,253.48,78.35,Pop Up,Finance
+2016-06-16 20:24:33,33,1,0,Asia,47447.89,145.48,38.35,Push Notif,Finance
+2016-02-17 11:15:31,37,1,0,South America,64235.51,161.42,85.35,Upper Banner,Finance
+2016-07-06 18:36:01,42,1,0,South America,43662.1,104.78,59.59,Lower Banner,Finance
+2016-05-18 01:00:52,31,1,0,Asia,58235.21,199.4,87.14,Push Notif,Fashion
+2016-04-05 05:54:15,52,0,0,Oceania,27241.11,156.99,46.61,Upper Banner,Finance
+2016-05-07 21:32:51,32,1,0,Europe,69481.85,209.72,79.09,Lower Banner,Fashion
+2016-04-21 19:56:24,44,0,1,Asia,64011.26,125.12,72.88,Lower Banner,Finance
+2016-02-24 07:13:00,48,0,0,Africa,54645.2,159.69,36.91,Push Notif,Finance
+2016-07-01 04:41:57,36,0,1,Africa,73600.28,200.55,77.51,Push Notif,Finance
+2016-04-04 18:36:59,43,0,0,Africa,28028.74,255.07,69.58,Lower Banner,Finance
+2016-06-05 13:16:24,29,0,1,Oceania,53673.08,210.46,85.56,Push Notif,Food
+2016-05-24 17:07:08,30,0,0,Asia,72188.9,166.31,71.4,Lower Banner,Food
+2016-03-20 08:22:50,30,0,0,South America,70377.23,212.38,73.57,Pop Up,Fashion
+2016-07-20 23:08:28,36,1,1,South America,75687.46,163.99,71.55,Upper Banner,Travel
+2016-05-27 12:45:37,40,0,1,Europe,65773.49,190.95,37.74,Push Notif,Finance
+2016-04-15 10:16:49,42,1,0,Europe,65963.37,120.75,60.07,Lower Banner,Finance
+2016-07-07 18:07:19,53,1,1,Africa,45465.25,128.0,49.42,Upper Banner,Finance
+2016-03-17 05:00:12,28,0,1,Antarctica,67669.06,212.56,74.65,Upper Banner,Finance
+2016-07-02 21:22:23,30,0,1,Europe,72209.99,158.05,65.65,Lower Banner,Travel
+2016-01-16 17:56:05,31,1,1,North America,60283.47,235.28,78.64,Push Notif,Food
+2016-02-17 18:50:57,33,0,0,Asia,68448.94,135.08,68.6,Lower Banner,Fashion
+2016-03-18 02:39:26,32,1,0,Asia,52140.04,256.4,73.72,Push Notif,Finance
+2016-03-11 09:58:32,40,0,0,Africa,45945.88,216.5,90.75,Push Notif,Finance
+2016-02-27 08:52:50,29,1,1,Africa,55984.89,123.24,56.64,Push Notif,Games
+2016-04-07 10:51:05,48,0,0,Oceania,57777.11,222.11,38.63,Push Notif,Finance
+2016-04-23 03:46:34,52,1,1,Africa,50086.17,118.45,59.05,Push Notif,Finance
+2016-02-26 04:57:14,43,1,1,Africa,63450.96,120.95,70.66,Push Notif,Finance
+2016-02-11 21:49:00,30,1,1,Asia,71384.57,208.58,72.97,Upper Banner,Games
+2016-04-16 12:26:31,34,1,0,Oceania,42760.22,162.03,89.37,Pop Up,Fashion
+2016-04-07 03:56:16,31,0,1,Europe,67479.62,177.55,80.6,Pop Up,Fashion
+2016-05-08 12:51:00,31,1,0,Europe,57669.41,210.26,86.19,Lower Banner,Finance
+2016-06-21 03:14:41,23,0,1,Oceania,34127.21,151.95,66.01,Lower Banner,Fashion
+2016-05-27 15:25:52,28,1,0,Europe,64828.0,204.79,78.74,Pop Up,Food
+2016-03-08 00:37:54,39,1,1,Oceania,75509.61,153.17,55.35,Upper Banner,Finance
+2016-02-11 13:26:22,25,0,0,Africa,57519.64,204.86,80.47,Push Notif,Food
+2016-01-09 03:45:19,41,1,0,Africa,50278.89,269.96,57.05,Lower Banner,Finance
+2016-02-11 20:45:46,36,1,1,Asia,60583.02,137.63,43.07,Upper Banner,Fashion
+2016-05-15 01:03:06,24,0,1,Oceania,32006.82,148.61,54.88,Upper Banner,Finance
+2016-01-12 21:17:15,25,0,1,Oceania,50506.44,241.36,69.86,Push Notif,Fashion
+2016-03-26 15:28:07,39,1,1,Africa,53041.77,128.62,41.86,Lower Banner,Finance
+2016-03-05 20:53:19,29,1,1,North America,50666.5,143.04,43.16,Push Notif,Games
+2016-06-06 21:26:51,24,1,1,Africa,65280.16,178.75,70.44,Upper Banner,Games
+2016-05-12 20:57:10,30,1,1,Europe,51013.37,252.6,73.21,Push Notif,Games
+2016-02-16 18:21:36,37,0,1,Africa,54520.14,180.77,90.97,Pop Up,Finance
+2016-02-26 01:18:44,22,0,0,Asia,38427.66,182.65,75.92,Upper Banner,Fashion
+2016-02-04 02:13:52,27,1,0,North America,61625.87,207.96,80.46,Lower Banner,Finance
+2016-07-07 12:17:33,31,1,1,Europe,51900.03,116.38,54.97,Pop Up,Fashion
+2016-07-07 23:32:38,31,1,0,Asia,46160.63,231.85,84.69,Pop Up,Food
+2016-07-23 04:04:42,51,0,0,Africa,66980.27,162.05,78.76,Upper Banner,Finance
+2016-04-17 06:58:18,27,1,1,Africa,67240.25,175.17,74.88,Upper Banner,Games
+2016-06-13 13:59:51,54,0,1,North America,23975.35,161.16,54.92,Pop Up,Finance
+2016-07-18 02:51:19,25,0,0,North America,55195.61,214.49,80.15,Push Notif,Fashion
+2016-04-30 08:07:13,27,0,0,Africa,47708.42,183.43,85.61,Upper Banner,Fashion
+2016-07-21 20:30:06,39,1,1,Africa,66522.79,249.81,70.92,Upper Banner,Finance
+2016-01-30 09:54:03,36,1,0,Asia,68863.95,156.97,43.97,Pop Up,Finance
+2016-06-15 05:43:02,42,1,0,Europe,43881.73,106.96,55.04,Lower Banner,Finance
+2016-01-06 21:43:22,29,0,0,Africa,47139.21,225.87,84.31,Pop Up,Fashion
+2016-02-18 03:58:36,38,0,0,Africa,68877.02,175.14,83.66,Upper Banner,Fashion
+2016-06-01 12:27:17,33,1,1,Africa,40243.82,142.21,39.53,Lower Banner,Fashion
+2016-04-24 01:48:21,31,1,1,Asia,33147.19,250.36,52.56,Push Notif,Finance
+2016-05-03 08:21:23,31,0,0,Africa,66269.49,214.74,80.39,Upper Banner,Fashion
+2016-07-13 14:05:22,28,1,0,Antarctica,60997.84,225.34,77.5,Upper Banner,Food
+2016-01-27 20:47:57,41,0,0,Oceania,60638.38,232.54,84.29,Push Notif,Finance
+2016-04-23 08:15:31,34,1,0,North America,70179.11,221.53,76.56,Pop Up,Fashion
+2016-01-23 18:59:21,41,1,0,Africa,59397.89,110.93,62.14,Push Notif,Travel
+2016-02-08 14:02:22,28,1,0,Africa,35350.55,196.83,39.76,Lower Banner,Food
+2016-01-16 23:37:51,60,0,0,Africa,60333.38,176.98,66.63,Lower Banner,Finance
+2016-06-26 07:01:47,31,0,0,North America,55187.85,256.4,70.96,Upper Banner,Fashion
+2016-02-02 11:49:18,40,1,1,Europe,66291.67,158.42,83.97,Lower Banner,Finance
+2016-01-30 04:38:41,36,1,0,Europe,68211.35,135.72,73.3,Push Notif,Finance
+2016-01-09 04:53:22,48,0,0,Europe,62784.85,123.13,56.7,Upper Banner,Travel
+2016-06-18 17:23:26,31,0,0,Europe,42042.95,121.05,73.84,Push Notif,Food
+2016-03-10 15:07:44,50,0,1,Europe,25767.16,142.23,50.63,Upper Banner,Finance
+2016-06-22 05:22:58,38,1,1,Oceania,70582.55,149.8,47.23,Upper Banner,Fashion
+2016-03-03 02:59:37,30,1,0,Oceania,39809.69,117.75,67.8,Upper Banner,Fashion
+2016-05-15 03:10:50,26,0,1,Asia,64188.5,201.54,77.89,Upper Banner,Food
+2016-06-17 09:58:46,42,0,1,South America,26023.99,123.8,69.2,Push Notif,Finance
+2016-05-08 22:24:27,39,0,0,Africa,63649.04,138.87,43.65,Lower Banner,Fashion
+2016-05-25 00:34:59,42,1,1,Europe,61690.93,133.42,44.16,Upper Banner,Finance
+2016-03-27 23:59:06,38,1,1,North America,42581.23,137.28,38.52,Lower Banner,Fashion
+2016-04-21 16:10:50,36,1,0,Africa,57737.51,221.98,87.09,Pop Up,Food
+2016-04-22 20:32:17,54,1,0,Europe,61228.96,140.15,71.9,Lower Banner,Finance
+2016-03-06 09:33:46,39,1,1,Asia,34942.26,125.11,79.51,Pop Up,Finance
+2016-06-20 08:22:09,42,0,1,Europe,76984.21,164.02,54.35,Pop Up,Finance
+2016-02-08 22:45:26,30,1,0,Asia,75265.96,178.75,59.01,Upper Banner,Finance
+2016-01-21 23:33:22,49,1,1,Asia,61230.03,132.38,48.46,Pop Up,Finance
+2016-06-17 03:23:13,31,1,1,Africa,61840.26,182.84,85.24,Push Notif,Finance
+2016-01-21 23:48:29,27,0,0,Asia,66624.6,191.14,77.05,Push Notif,Fashion
+2016-04-03 21:13:46,43,1,0,Asia,76246.96,155.8,67.28,Push Notif,Travel
+2016-06-28 12:51:02,49,0,0,Europe,51067.54,258.62,51.68,Lower Banner,Finance
+2016-02-03 19:12:51,49,1,1,Oceania,67430.96,135.24,56.3,Lower Banner,Finance
+2016-06-16 02:01:24,58,0,0,Oceania,39132.64,140.83,59.51,Lower Banner,Finance
+2016-06-19 23:21:38,31,1,1,South America,65834.97,228.94,76.21,Upper Banner,Fashion
+2016-02-03 07:59:16,38,1,1,Europe,32689.04,113.53,56.14,Lower Banner,Fashion
+2016-01-27 12:38:16,22,0,0,Antarctica,46179.97,209.82,76.02,Lower Banner,Fashion
+2016-04-20 10:04:29,32,1,0,South America,70012.83,208.02,78.76,Push Notif,Travel
+2016-02-14 11:36:08,38,0,0,Oceania,67132.46,244.23,73.49,Upper Banner,Fashion
+2016-07-20 01:56:33,28,0,0,Africa,58576.12,226.79,79.67,Upper Banner,Fashion
+2016-02-28 03:34:35,46,0,0,North America,49206.4,115.6,49.21,Upper Banner,Finance
+2016-04-25 16:58:50,27,1,1,North America,55901.12,231.38,77.25,Pop Up,Food
+2016-07-14 12:07:10,32,0,1,Asia,48246.6,194.83,34.66,Lower Banner,Games
+2016-02-21 13:11:08,32,1,1,South America,68324.48,215.29,78.79,Push Notif,Food
+2016-07-04 11:03:49,35,0,0,Europe,65826.53,223.16,81.59,Lower Banner,Fashion
+2016-06-25 00:33:23,28,0,1,Europe,67033.34,226.64,68.47,Push Notif,Fashion
+2016-03-10 23:36:03,29,1,1,North America,73910.9,198.5,62.42,Push Notif,Games
+2016-03-21 18:46:41,30,1,0,Europe,52097.32,163.0,37.51,Pop Up,Games
+2016-06-27 21:51:47,45,0,1,Africa,43241.88,150.79,35.98,Push Notif,Finance
+2016-06-14 12:08:10,45,0,1,Asia,47968.32,124.67,43.49,Upper Banner,Finance
+2016-07-16 10:14:04,43,0,1,Africa,28495.21,122.31,52.84,Push Notif,Finance
+2016-05-23 21:00:45,31,0,0,Europe,66636.84,214.08,80.09,Pop Up,Fashion
+2016-01-15 01:20:05,33,0,0,Asia,66412.04,215.04,81.37,Lower Banner,Fashion
+2016-04-24 13:42:15,25,0,1,Europe,25408.21,161.16,62.2,Push Notif,Food
+2016-01-31 05:12:44,31,0,0,Africa,58287.86,193.6,87.18,Upper Banner,Fashion
+2016-07-17 13:22:43,48,1,1,Asia,72553.94,176.78,46.89,Upper Banner,Travel
+2016-05-31 11:44:45,24,1,1,North America,56194.56,178.85,79.81,Lower Banner,Games
+2016-01-23 13:14:18,26,0,1,Africa,56435.6,131.98,56.57,Upper Banner,Food
+2016-06-13 06:11:33,48,1,1,North America,47929.83,139.34,39.87,Pop Up,Finance
+2016-04-25 11:01:54,46,0,0,Europe,54286.1,119.93,48.01,Push Notif,Finance
+2016-04-09 09:26:39,32,1,1,Asia,62430.55,235.29,78.84,Pop Up,Finance
+2016-03-13 20:35:42,26,0,1,Europe,59785.94,236.5,69.47,Push Notif,Fashion
+2016-06-18 05:17:33,29,0,0,Europe,67526.92,211.64,76.59,Lower Banner,Fashion
+2016-01-30 16:15:29,28,0,0,South America,58996.12,237.34,74.49,Lower Banner,Food
+2016-05-24 10:04:39,26,0,1,Europe,46974.15,221.59,80.64,Push Notif,Fashion
+2016-03-25 05:05:27,23,0,1,South America,56457.01,181.11,76.49,Upper Banner,Finance
+2016-04-09 16:31:15,26,1,1,South America,55336.18,131.68,61.09,Lower Banner,Food
+2016-04-04 03:57:48,28,0,0,Africa,63126.96,173.01,43.7,Lower Banner,Fashion
+2016-01-02 14:36:03,40,1,0,Oceania,70225.6,187.76,83.26,Lower Banner,Travel
+2016-01-09 17:33:03,54,0,1,South America,53188.69,134.46,48.86,Pop Up,Finance
+2016-01-14 14:00:09,23,0,1,Africa,30227.98,212.58,55.6,Push Notif,Food
+2016-03-01 22:13:37,28,1,0,North America,45593.93,207.48,86.41,Pop Up,Finance
+2016-03-23 06:00:15,32,1,0,Europe,31092.93,136.4,46.77,Lower Banner,Games
+2016-02-19 13:26:24,42,1,1,South America,69775.75,247.05,60.75,Push Notif,Finance
+2016-06-19 03:19:44,49,1,1,South America,42993.48,110.57,60.7,Push Notif,Finance
+2016-04-28 22:54:37,34,1,0,Europe,57260.41,245.78,79.36,Upper Banner,Finance
+2016-01-10 02:31:19,29,1,0,Europe,54806.18,245.89,74.15,Push Notif,Finance
+2016-05-24 18:35:58,29,0,0,Asia,70410.11,218.79,69.78,Upper Banner,Fashion
+2016-05-19 09:30:12,41,0,0,Africa,53412.32,250.03,81.51,Pop Up,Finance
+2016-03-02 06:35:08,24,1,1,Asia,47258.59,228.81,76.2,Pop Up,Games
+2016-03-30 19:09:50,33,0,0,Africa,61771.9,214.53,84.79,Upper Banner,Fashion
+2016-03-09 14:57:11,32,0,1,Oceania,72272.9,210.54,74.02,Push Notif,Food
+2016-01-03 17:10:05,32,1,0,Africa,43870.51,211.87,88.72,Push Notif,Food
+2016-05-20 21:31:24,33,1,0,Asia,54541.56,238.99,82.73,Upper Banner,Fashion
+2016-03-15 15:49:14,31,0,0,Antarctica,74535.94,184.1,70.79,Push Notif,Food
+2016-07-05 18:59:45,26,0,0,Oceania,46339.25,127.26,56.01,Push Notif,Fashion
