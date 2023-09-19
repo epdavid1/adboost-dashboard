@@ -8,7 +8,7 @@ import plotly.io as pio
 import plotly.graph_objects as go
 import pickle
 from xgboost import XGBClassifier
-from sklearn.cluster impor KMeans
+from sklearn.cluster import KMeans
 from feature_engine.creation import CyclicalFeatures
 import time
 import shap
