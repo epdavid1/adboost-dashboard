@@ -113,8 +113,8 @@ with st.sidebar:
         st.image('logo.png')
     selected = option_menu(
         None,
-        ['Dashboard', 'Predict'],
-        icons=['bi-graph-up-arrow', 'gear', 'sliders'],
+        ['Dashboard', 'Click Prediction', 'User Segmentation', 'Ad Optimization'],
+        icons=['bi-graph-up-arrow', 'gear', 'people', 'sliders'],
         menu_icon='cast',
         default_index=0
     )
@@ -215,5 +215,9 @@ def predict_page():
 
 if selected == 'Dashboard':
     dashboard_page(df_dashboard)
-elif selected == 'Predict':
+elif selected == 'Click Prediction':
     predict_page()
+elif selected == 'User Segmentation':
+    pass
+elif selected == 'Ad Optimization':
+    pass
