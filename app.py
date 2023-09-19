@@ -35,7 +35,7 @@ def dashboard_page(df_dashboard):
         clicked = df_dashboard[df_dashboard['Timestamp'].dt.strftime('%Y %B') == option_date]['Clicked on Ad']
         filtered = df_dashboard[df_dashboard['Timestamp'].dt.strftime('%Y %B') == option_date]
 
-    with st.expander('Dataset', expanded=False):
+    with st.expander('Data', expanded=False):
         if option_date == 'All':
             st.dataframe(df_dashboard)
         else:
