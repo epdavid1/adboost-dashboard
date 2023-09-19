@@ -8,6 +8,7 @@ import plotly.io as pio
 import plotly.graph_objects as go
 import pickle
 from xgboost import XGBClassifier
+from sklearn.cluster impor KMeans
 from feature_engine.creation import CyclicalFeatures
 import time
 import shap
@@ -221,7 +222,7 @@ def segmentation_page():
 
         with st.spinner('Loading'):
             time.sleep(1)
-            
+
         with st.expander('Segmented data'):
             df_test_scaled = scaler.transform(preprocess(df_test)[df_test_cluster.columns])
             cluster = kmeans.predict(df_test_scaled)
