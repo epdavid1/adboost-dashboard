@@ -18,7 +18,10 @@ with open('style.css')as f:
 
 df_dashboard = pd.read_csv('df_dashboard.csv', parse_dates=['Timestamp'])
 df_test = pd.read_csv('df_predict.csv', parse_dates=['Timestamp'])
+df_test_cluster = pd.read_csv('df_test_cluster.csv')
 xgb = pickle.load(open('xgb.pkl', 'rb'))
+scaler = pickle.load(open('scaler.pkl', 'rb'))
+kmeans = pickle.load(open('kmeans.pkl', 'rb'))
 
 def dashboard_page(df_dashboard):
     st.header('Ad Campaign Dashboard')
@@ -210,14 +213,26 @@ def predict_page():
                 fig2.tight_layout()
                 st.pyplot(fig2, use_container_width=True)
 
+def segmentation_page():
+    segment_button = st.button('Upload sample input dataset', type='primary')
+    if segment_button == True:
+        with st.expander('Input data'):
+            st.write(df_test)
 
-
+        with st.spinner('Loading'):
+            time.sleep(1)
+            
+        with st.expander('Segmented data'):
+            df_test_scaled = scaler.transform(preprocess(df_test)[df_test_cluster.columns])
+            cluster = kmeans.predict(df_test_scaled)
+            df_test_cluster2 = pd.concat([pd.DataFrame(cluster, columns=['cluster']), df_test], axis=1)
+            st.write(df_test_cluster2)
 
 if selected == 'Dashboard':
     dashboard_page(df_dashboard)
 elif selected == 'Click Prediction':
     predict_page()
 elif selected == 'User Segmentation':
-    pass
+    segmentation_page()
 elif selected == 'Ad Optimization':
     pass
