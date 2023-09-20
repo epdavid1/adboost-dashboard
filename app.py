@@ -17,13 +17,19 @@ st.set_page_config(page_title="Ad Campaign Dashboard", layout="wide", initial_si
 with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
-df_dashboard = pd.read_csv('df_dashboard.csv', parse_dates=['Timestamp'])
-df_test = pd.read_csv('df_predict.csv', parse_dates=['Timestamp'])
-df_test_cluster = pd.read_csv('df_test_cluster.csv')
 xgb = pickle.load(open('xgb.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 kmeans = pickle.load(open('kmeans.pkl', 'rb'))
 
+@st.cache_data
+def fetch_data():
+    df_dashboard = pd.read_csv('df_dashboard.csv', parse_dates=['Timestamp'])
+    df_test = pd.read_csv('df_predict.csv', parse_dates=['Timestamp'])
+    df_test_cluster = pd.read_csv('df_test_cluster.csv')
+
+    return df_dashboard, df_test, df_test_cluster
+
+df_dashboard, df_test, df_test_cluster = fetch_data()
 
 def dashboard_page(df_dashboard):
     st.header('Ad Campaign Dashboard')
@@ -63,10 +69,10 @@ def dashboard_page(df_dashboard):
 
     with col3:
         if (option_date == 'All') or (option_date == dates[0]):
-            st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked)*100,2))+' %')
+            st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked)*100,1))+' %')
         else:
             delta3 = round((clicked.sum()/len(clicked) - previous_clicked.sum()/len(previous_clicked))*100,2)
-            st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked)*100,2))+' %', delta=delta3)
+            st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked)*100,1))+' %', delta=delta3)
 
 
     with col4:
