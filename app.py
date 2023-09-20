@@ -24,6 +24,7 @@ xgb = pickle.load(open('xgb.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 kmeans = pickle.load(open('kmeans.pkl', 'rb'))
 
+
 def dashboard_page(df_dashboard):
     st.header('Ad Campaign Dashboard')
 
@@ -47,17 +48,30 @@ def dashboard_page(df_dashboard):
 
     col1, col2, col3, col4 = st.columns(4, gap='medium')
     with col1:
-        st.metric(label='Clicks', value=clicked.sum())
-
+        if (option_date == 'All') or (option_date == dates[0]):
+            st.metric(label='Clicks', value=clicked.sum())
+        else:
+            previous_clicked = df_dashboard[df_dashboard['Timestamp'].dt.strftime('%Y %B') == dates[(dates.index(option_date)-1)]]['Clicked on Ad']
+            delta1 = int(clicked.sum() - previous_clicked.sum())
+            st.metric(label='Clicks', value=clicked.sum(), delta=delta1) 
     with col2:
-        st.metric(label='Impression', value=len(clicked))
+        if (option_date == 'All') or (option_date == dates[0]):
+            st.metric(label='Impression', value=len(clicked))
+        else:
+            delta2 = len(clicked) - len(previous_clicked)
+            st.metric(label='Impression', value=len(clicked), delta=delta2) 
 
     with col3:
-        st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked),2)*100)+' %')
+        if (option_date == 'All') or (option_date == dates[0]):
+            st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked)*100,2))+' %')
+        else:
+            delta3 = round((clicked.sum()/len(clicked) - previous_clicked.sum()/len(previous_clicked))*100,2)
+            st.metric(label='Click-through Rate', value=str(round(clicked.sum()/len(clicked)*100,2))+' %', delta=delta3)
+
 
     with col4:
         st.metric(label='Cost per Click', value='$ 0.97')
-    
+
     col5, col6, col7 = st.columns(3, gap='medium')
     with col5:
         fig = px.line(filtered.groupby(pd.Grouper(key='Timestamp', freq='D'))['Clicked on Ad'].sum().reset_index(),
@@ -83,7 +97,6 @@ def dashboard_page(df_dashboard):
         fig.update_layout(
             height=300,
             margin=dict(l=20, r=20, t=30, b=30)
-
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -166,68 +179,79 @@ def predict_page():
         )
         st.plotly_chart(model_acc_plot, use_container_width=True)
 
-    upload = st.button('Upload sample input dataset', type='primary')
-    if upload == True:
-        with st.expander('Dataset input'):
-            st.write(df_test.replace({1:'Yes', 0:'No'}))
+    with st.expander('Input data'):
+        st.write(df_test.replace({1:'Yes', 0:'No'}))
 
-        df_result = predict(df_test)
+    df_result = predict(df_test)
 
-        with st.spinner('Loading'):
-            time.sleep(1)
+    with st.expander('Predicted output'):
+        st.write(df_result.replace({1:'Yes', 0:'No'}))
 
-        with st.expander('Predicted output'):
-            st.write(df_result.replace({1:'Yes', 0:'No'}))
+    with st.expander('Feature importance'):
+        col13, col14 = st.columns(2)
+        with col14:
+            explainer = shap.Explainer(xgb)
+            shap_values = explainer.shap_values(preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index])
+            shap.summary_plot(shap_values, features=preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index],
+                                    alpha=0.5,
+                                    max_display=5,
+                                    show=False
+                                    )
+            fig1 = plt.gcf()
+            fig1.set_size_inches(10.5, 5.8)
+            for ax1 in fig1.get_axes():
+                for item1 in ([ax1.title, ax1.xaxis.label, ax1.yaxis.label] + ax1.get_xticklabels() + ax1.get_yticklabels()):
+                    item1.set_fontsize(16)
+            fig1.suptitle("Impact of top 5 features towards positive class", fontsize=16)
+            fig1.tight_layout()
+            st.pyplot(fig1, use_container_width=True)
 
-        with st.expander('Feature importance'):
-            col13, col14 = st.columns(2)
-            with col14:
-                explainer = shap.Explainer(xgb)
-                shap_values = explainer.shap_values(preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index])
-                shap.summary_plot(shap_values, features=preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index],
-                                        alpha=0.5,
-                                        max_display=5,
-                                        show=False
-                                        )
-                fig1 = plt.gcf()
-                fig1.set_size_inches(10.5, 5.8)
-                for ax1 in fig1.get_axes():
-                    for item1 in ([ax1.title, ax1.xaxis.label, ax1.yaxis.label] + ax1.get_xticklabels() + ax1.get_yticklabels()):
-                        item1.set_fontsize(16)
-                fig1.suptitle("Impact of top 5 features towards positive class", fontsize=16)
-                fig1.tight_layout()
-                st.pyplot(fig1, use_container_width=True)
-
-            with col13:
-                plt.clf()
-                shap.summary_plot(shap_values, features=preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index],
-                                        alpha=0.5,
-                                        plot_type='bar',
-                                        show=False
-                                        )
-                fig2 = plt.gcf()
-                fig2.set_size_inches(10.5, 6)
-                for ax2 in fig2.get_axes():
-                    for item2 in ([ax2.title, ax2.xaxis.label, ax2.yaxis.label] + ax2.get_xticklabels() + ax2.get_yticklabels()):
-                        item2.set_fontsize(16)
-                fig2.suptitle("Average impact of all features towards positive class", fontsize=16)
-                fig2.tight_layout()
-                st.pyplot(fig2, use_container_width=True)
+        with col13:
+            plt.clf()
+            shap.summary_plot(shap_values, features=preprocess(df_test).iloc[df_result[df_result['Clicked on Ad?'] == 1].index],
+                                    alpha=0.5,
+                                    plot_type='bar',
+                                    show=False
+                                    )
+            fig2 = plt.gcf()
+            fig2.set_size_inches(10.5, 6)
+            for ax2 in fig2.get_axes():
+                for item2 in ([ax2.title, ax2.xaxis.label, ax2.yaxis.label] + ax2.get_xticklabels() + ax2.get_yticklabels()):
+                    item2.set_fontsize(16)
+            fig2.suptitle("Average impact of all features towards positive class", fontsize=16)
+            fig2.tight_layout()
+            st.pyplot(fig2, use_container_width=True)
 
 def segmentation_page():
-    segment_button = st.button('Upload sample input dataset', type='primary')
-    if segment_button == True:
-        with st.expander('Input data'):
-            st.write(df_test)
+    with st.expander('Input data'):
+        st.write(df_test)
 
-        with st.spinner('Loading'):
-            time.sleep(1)
+    with st.expander('Segmented data'):
+        df_test_scaled = scaler.transform(preprocess(df_test)[df_test_cluster.columns])
+        cluster = kmeans.predict(df_test_scaled)
+        df_test_cluster2 = pd.concat([pd.DataFrame(cluster, columns=['cluster']), df_test], axis=1)
+        st.write(df_test_cluster2)
 
-        with st.expander('Segmented data'):
-            df_test_scaled = scaler.transform(preprocess(df_test)[df_test_cluster.columns])
-            cluster = kmeans.predict(df_test_scaled)
-            df_test_cluster2 = pd.concat([pd.DataFrame(cluster, columns=['cluster']), df_test], axis=1)
-            st.write(df_test_cluster2)
+    with st.expander('Feature distribution'):
+        col15, col16, col17 = st.columns(3)
+        with col15:
+            option15 = st.selectbox('Feature', df_test_cluster2.columns[1:])   
+        with col16:
+            option16 = st.selectbox('Cluster', df_test_cluster2['cluster'].sort_values().unique())
+        with col17:
+            bins = st.slider('No. of bins', 5, 30, 10)
+
+        col18, col19, col20 = st.columns((3))
+        with col18:
+            fig15 = px.histogram(df_test_cluster2[df_test_cluster2['cluster'] == option16],
+                x=option15,
+                nbins=bins,
+                title='Feature distribution plot')
+            fig15.update_layout(
+                        height=300,
+                        margin=dict(l=20, r=20, t=30, b=30)
+                    )
+            st.plotly_chart(fig15, use_container_width=True)
 
 if selected == 'Dashboard':
     dashboard_page(df_dashboard)
