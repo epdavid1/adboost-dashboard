@@ -3,3 +3,6 @@ runOnSave = true
 
 [deprecation]
 showPyplotGlobalUse = false
+
+[theme]
+primaryColor = '#C439FF'
