@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 import pickle
 from xgboost import XGBClassifier
 from sklearn.cluster import KMeans
+from sklearn.metrics import roc_curve, roc_auc_score
 from feature_engine.creation import CyclicalFeatures
 import time
 import shap
@@ -24,12 +25,13 @@ kmeans = pickle.load(open('kmeans.pkl', 'rb'))
 @st.cache_data
 def fetch_data():
     df_dashboard = pd.read_csv('df_dashboard.csv', parse_dates=['Timestamp'])
-    df_test = pd.read_csv('df_predict.csv', parse_dates=['Timestamp'])
+    y_test = pd.read_csv('df_predict.csv', parse_dates=['Timestamp'])['Clicked on Ad']
+    df_test = pd.read_csv('df_predict.csv', parse_dates=['Timestamp']).drop('Clicked on Ad', axis=1)
     df_test_cluster = pd.read_csv('df_test_cluster.csv')
 
-    return df_dashboard, df_test, df_test_cluster
+    return df_dashboard, df_test, df_test_cluster, y_test
 
-df_dashboard, df_test, df_test_cluster = fetch_data()
+df_dashboard, df_test, df_test_cluster, y_test = fetch_data()
 
 def dashboard_page(df_dashboard):
     st.header('Ad Campaign Dashboard')
@@ -83,7 +85,7 @@ def dashboard_page(df_dashboard):
         fig = px.line(filtered.groupby(pd.Grouper(key='Timestamp', freq='D'))['Clicked on Ad'].sum().reset_index(),
             x='Timestamp',
             y='Clicked on Ad',
-            line_shape='spline',
+#           line_shape='spline',
             title='Clicks Over Time')
         fig.update_layout(
             height=300,
@@ -159,12 +161,15 @@ def preprocess(df):
 def predict(df):
     df_preprocessed = preprocess(df)
     preds = xgb.predict(df_preprocessed[xgb.get_booster().feature_names])
+    preds_proba_1 = xgb.predict_proba(df_preprocessed[xgb.get_booster().feature_names])[:,1]
     df_preds = pd.concat([pd.DataFrame(preds, columns=['Clicked on Ad?']), df], axis=1)
 
-    return df_preds
+
+    return df_preds, preds_proba_1
 
 
 def predict_page():
+    df_result, preds_proba_1  = predict(df_test)
 
     with st.expander('Model details', expanded=True):
         col8, col9, col10 = st.columns(3)
@@ -175,20 +180,40 @@ def predict_page():
         with col10:
             st.metric(label='Date created', value='01/01/2023')
 
-        x = pd.date_range(start='2022-12-31', end='2023-09-01', freq='M')
-        y = [0.97, 0.97, 0.96, 0.96, 0.93, 0.94, 0.93, 0.94, 0.94]
+        col_acc, col_roc = st.columns(2)
+        with col_acc:
+            x = pd.date_range(start='2022-12-31', end='2023-09-01', freq='M')
+            y = [0.97, 0.97, 0.96, 0.96, 0.93, 0.94, 0.93, 0.94, 0.94]
+            model_acc_plot = px.line(x=x, y=y, title='Model accuracy over time', markers=True, labels={'x': 'Date', 'y': 'Accuracy'})
+            model_acc_plot.update_layout(
+                height=200,
+                margin=dict(l=20, r=20, t=30, b=30),
+            )
+            st.plotly_chart(model_acc_plot, use_container_width=True)
 
-        model_acc_plot = px.line(x=x, y=y, title='Model accuracy over time', markers=True, labels={'x': 'Date', 'y': 'Accuracy'})
-        model_acc_plot.update_layout(
+        with col_roc:
+            fpr, tpr, _ = roc_curve(y_test, preds_proba_1)
+            auc = roc_auc_score(y_test, preds_proba_1)
+            fig_roc = px.line(x=fpr, y=tpr, title='ROC curve', labels={'x': 'False positive rate', 'y': 'True positive rate'})
+            #fig_roc.add_trace(go.Scatter(x=fpr + fpr[::-1], y=[0] + tpr[::-1], fill='tonexty', fillcolor='rgba(0,100,80,0.2)', line=dict(color='rgba(255,255,255,0)'), showlegend=False))
+            fig_roc.update_layout(
             height=200,
             margin=dict(l=20, r=20, t=30, b=30),
-        )
-        st.plotly_chart(model_acc_plot, use_container_width=True)
+            )
+            fig_roc.add_annotation(
+                xref="x domain",
+                yref="y domain",
+                x=0.5,
+                y=0.5,
+                text="AUC = "+str(round(auc,3)),
+                showarrow=False,
+            )
+            st.plotly_chart(fig_roc, use_container_width=True)
 
     with st.expander('Input data'):
         st.write(df_test.replace({1:'Yes', 0:'No'}))
 
-    df_result = predict(df_test)
+    
 
     with st.expander('Predicted output'):
         st.write(df_result.replace({1:'Yes', 0:'No'}))
