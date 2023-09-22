@@ -135,7 +135,8 @@ def dashboard_page(df_dashboard):
 with st.sidebar:
     cola, colb, colc = st.columns((1,3,1))
     with colb:
-        st.image('logo.png')
+        with st.container():
+            st.image('logo.png')
     selected = option_menu(
         None,
         ['Dashboard', 'Click Prediction', 'User Segmentation', 'Ad Optimization'],
